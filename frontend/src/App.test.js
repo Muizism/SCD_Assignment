@@ -24,3 +24,11 @@ test('Check integer price', () => {
   expect(inputEl).toBeInTheDocument(Number);
 
 });
+
+test('Check integer stock', () => {
+  render(<Products/>);
+
+  const inputE2 = screen.getByTestId('stock_testID');
+  expect(inputE2).toBeInTheDocument(Number);
+
+});
