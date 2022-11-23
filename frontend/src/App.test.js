@@ -57,3 +57,13 @@ test("CheckNavbar button 'View products'", () => {
   expect(linkElement).toHaveTextContent("View products");
 });
 
+
+test("Check Navbar icon", () => {
+  render(
+    <MemoryRouter>
+      <Navbar />
+    </MemoryRouter>
+  );
+  expect(screen.getByRole("img")).toBeInTheDocument();
+})
+
