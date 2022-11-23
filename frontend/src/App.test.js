@@ -44,3 +44,16 @@ test("CheckNavbar button 'Add products'", () => {
   const linkElement = screen.getByTestId("Nav");
   expect(linkElement).toHaveTextContent("Add products");
 });
+
+
+
+test("CheckNavbar button 'View products'", () => {
+  render(
+    <MemoryRouter>
+      <Navbar />
+    </MemoryRouter>
+  );
+  const linkElement = screen.getByTestId("Nav");
+  expect(linkElement).toHaveTextContent("View products");
+});
+
