@@ -8,3 +8,11 @@ test('Check render product_id input', () => {
   expect(inputEl).toBeInTheDocument();
 
 });
+
+test('Check render name input', () => {
+  render(<Products/>);
+
+  const inputEl = screen.getByTestId('name_id');
+  expect(inputEl).toBeInTheDocument();
+
+});
