@@ -16,3 +16,11 @@ test('Check render name input', () => {
   expect(inputEl).toBeInTheDocument();
 
 });
+
+test('Check integer price', () => {
+  render(<Products/>);
+
+  const inputEl = screen.getByTestId('price-test');
+  expect(inputEl).toBeInTheDocument(Number);
+
+});
