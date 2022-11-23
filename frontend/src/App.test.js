@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import Navbar from './components/navbar.js';
 import Products from "./components/products.js"
 
 test('Check render product_id input', () => {
@@ -31,4 +33,14 @@ test('Check integer stock', () => {
   const inputE2 = screen.getByTestId('stock_testID');
   expect(inputE2).toBeInTheDocument(Number);
 
+});
+
+
+
+test("CheckNavbar button 'Add products'", () => {
+  render(
+    <MemoryRouter><Navbar /></MemoryRouter>
+  );
+  const linkElement = screen.getByTestId("Nav");
+  expect(linkElement).toHaveTextContent("Add products");
 });
