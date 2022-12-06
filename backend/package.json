@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon -L ./server.js localhost 3080",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js"
+    "start":"nodemon server.js"
   },
   "keywords": [],
   "author": "",
